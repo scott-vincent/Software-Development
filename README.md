@@ -9,7 +9,7 @@ Download the 64-bit version.
 
 Create the following folder:
 
-C:\Program Files\Eclipse\Neon
+`C:\Program Files\Eclipse\Neon`
 
 Right-click the folder and select Properties. Click the Security tab, in "Group or user names" choose "Users",
 then in "Permissions for Users" click Full Control and click Apply.
