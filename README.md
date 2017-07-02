@@ -126,7 +126,7 @@ It created a Java source file for you:
 
 ```
 C:\Users\Ross\Java Programs\my-first-app\src\main\java\com\rossbv\App.java
-``
+```
 
 Maven also created a pom (build file) for you:
 
