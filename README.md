@@ -424,6 +424,56 @@ Wow, that was super easy!
 Who said software development was hard work?  
 
 
-Exercise 7 - AngularJS
+Exercise 7 - Serving Client (Static) Files
 ==========
+
+What we call 'static' files are the files like *.html (page layout), *.css (page styling) and *.js (javascript).
+These make up the UI that runs in the web browser. The browser requests (downloads) these files from a fixed (static)
+location on the server. Once downloaded, they are normally cached by the browser to speed up access on subsequent visits to the same URL.
+
+When you type a URL into your browser it automatically tries to download the top-level (index) page called index.html from the static
+folder on the server that the URL points to. 
+
+As you would expect from Spring Boot, it manages and configures all this for us without us having to do anything other than providing
+the index.html file.
+
+In the Eclipse Project Explorer, expand the folder paths (further down, underneath the package paths) so you can see the folder
+called main (under the src folder). Right-click on main and choose New Folder. Name it "resources" so that you have src/main/resources.
+Create another folder under here called "static" so that you have src/main/resources/static.
+
+Right-click and create a new file in the src/main/resources/static folder called "index.html". Double click the file to edit it and enter:
+
+```
+<!DOCTYPE html>
+<html>
+<body>
+    <b>My Index Page</b>
+    <br>
+    <br>
+    This is the home page
+</body>
+</html>
+```    
+
+Don't forget to press Ctrl S to save it. Now start you web server and try accessing the following URLs in your web browser:
+
+```
+http://localhost:8080
+http://localhost:8080/greeting
+```
+
+You are now serving both client-side (html) and server-side (java) data. Normally, the user wouldn't call the server-side REST methods
+directly. Instead,  the client-side html would include JavaScript (*.js) files (which would also be served from your static folder
+and downloaded into the client's browser) and the JavaScript would make the REST calls on the user's behalf whenever the UI requires it.  
+
+
+Exercise 8 - AngularJS
+==========
+
+We are now going to make your static client-side files much more dynamic with the magic of AngularJS. You can do lots of clever things
+and create some pretty web pages by manipulating the DOM (Document Object Model) using JavaScript.
+
+You don't know how to manipulate the DOM? Don't worry, AngularJS hides all this away from you and makes it super-easy!
+Also, as we definitely don't like re-inventing the wheel, there are lots of open-source AngularJS plug-ins that we can take advantage of.
+
 Coming soon!  
