@@ -65,7 +65,7 @@ Unzip to C:\ so you end up with:
 C:\apache-maven-3.5.0
 ```
 
-You need to create an environment variable to tell your system where JMaven is installed
+You need to create an environment variable to tell your system where Maven is installed
 and to be able to run it from the command line. You do this as follows:
 
 Either use the windows search box and search for "Edit environment variables for your account"
@@ -402,7 +402,7 @@ Your web server is running on port 8080 so try typing this in the address bar:
 localhost:8080
 ```
 
-You will get an error, but if you stop the web server and try again you will get a different error so at least we know it's listening on that port!
+You will get an error, but if you stop the web server and try again you will get a different error so at least we know it's listening on that port!  
 
 It's a REST service so it only listens on certain endpoints. Try this:
 
@@ -420,10 +420,10 @@ You should have got some personalised JSON back.
 
 The unit tests include tests for calling the greeting with and without a name. Run them and make sure they succeed.
 
-Wow, that was super easy!
-Who said software development was hard work?
+Wow, that was super easy!  
+Who said software development was hard work?  
 
 
 Exercise 7 - AngularJS
 ==========
-Coming soon!
+Coming soon!  
