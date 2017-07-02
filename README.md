@@ -122,11 +122,19 @@ mvn archetype:generate -DgroupId=com.rossbv -DartifactId=my-first-app -Darchetyp
 ```
 
 This has created a directory for you and put some dummy code in it. Use Windows Explorer to examine it.
-It created a Java source file for you: C:\Users\Ross\Java Programs\my-first-app\src\main\java\com\rossbv\App.java
-Maven also created a pom (build file) for you: C:\Users\Ross\Java Programs\my-first-app\pom.xml"
+It created a Java source file for you:
 
-Have a look at the pom file. It tells Maven how to build your program. If your program relies on external JAR files (similar to Python modules),
-there will be lines in the pom file telling it where to download them from and which version your program needs.
+```
+C:\Users\Ross\Java Programs\my-first-app\src\main\java\com\rossbv\App.java
+``
+
+Maven also created a pom (build file) for you:
+
+```
+C:\Users\Ross\Java Programs\my-first-app\pom.xml
+```
+
+Have a look at the pom file. It tells Maven how to build your program. If your program relies on external JAR files (similar to Python modules), there will be lines in the pom file telling it where to download them from and which version your program needs.
 
 For a fuller description of what Maven does see here: https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html   
 
@@ -171,6 +179,7 @@ java -jar my-first-app-1.0-SNAPSHOT.jar
   
 You will see it complains. See if you can work out how to modify your pom file to make it include a manifest file in your JAR.
 All it basically needs to know is the entry point for your program, i.e. com.rossbv.App
+
 For a big hint, go here: http://www.avajava.com/tutorials/lessons/how-do-i-specify-a-main-class-in-the-manifest-of-my-generated-jar-file.html  
 
 
