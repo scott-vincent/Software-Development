@@ -9,7 +9,9 @@ Download the 64-bit version.
 
 Create the following folder:
 
-`C:\Program Files\Eclipse\Neon`
+`
+  C:\Program Files\Eclipse\Neon
+`
 
 Right-click the folder and select Properties. Click the Security tab, in "Group or user names" choose "Users",
 then in "Permissions for Users" click Full Control and click Apply.
@@ -20,7 +22,9 @@ Select Eclipse IDE for Java EE Developers and change the installation folder to 
 When installation is complete, click on Menu button (top-right) with the exclamation mark on it and choose Update.
 Launch Eclipse and change the workspace to:
 
-C:\Users\<you>\workspace_java
+`
+  C:\Users\<you>\workspace_java
+`
 
 You can tick the box to always use this workspace.
 When the Eclipse IDE loads, just quit.
@@ -54,7 +58,9 @@ https://maven.apache.org/download.cgi
 Choose the Binary zip archive.
 Unzip to C:\ so you end up with:
 
-C:\apache-maven-3.5.0
+`
+  C:\apache-maven-3.5.0
+`
 
 You need to create an environment variable to tell your system where JMaven is installed
 and to be able to run it from the command line. You do this as follows:
@@ -94,10 +100,11 @@ Validate Environment
 
 Make sure you set everything up correctly. Run a Command Prompt and try the following:
 
-java -version
-mvn --version
-git --version
-
+`
+  java -version
+  mvn --version
+  git --version
+`
 
 Getting Started (Your first Java program)
 ===============
@@ -107,10 +114,12 @@ we can import our project into Eclipse using the "Import existing Maven project 
 
 It can create a project structure for you and get you started. Run a command prompt and do the following:
 
+`
   cd c:\users\ross
   mkdir "Java Programs"
   cd Java Programs
   mvn archetype:generate -DgroupId=com.rossbv -DartifactId=my-first-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+`
 
 This has created a directory for you and put some dummy code in it. Use Windows Explorer to examine it.
 It created a Java source file for you: C:\Users\Ross\Java Programs\my-first-app\src\main\java\com\rossbv\App.java
@@ -125,12 +134,16 @@ Note that the pom file includes a dependency called junit. This is a module that
 Whenever you write source code you should also write unit test code. This gets run everytime you build your source and confirms
 that the source is functioning as you intended. Your unit test code is here:
 
+`
   C:\Users\Ross\Java Programs\my-first-app\src\test\java\com\rossbv\AppTest.java 
+`
 
 Now let's compile and run your app.java source.
 
+`
   cd C:\Users\Ross\Java Programs\my-first-app
   mvn clean install
+`
 
 This should compile your app.java and create a JAR file for you. Note that a JAR file is just a zip file in disguise. You can
 load a JAR file into 7-zip to unzip it and see what it contains.
@@ -145,12 +158,16 @@ com.microsoft.*
 
 You can now run this JAR file using java:
 
+`
   cd C:\Users\Ross\Java Programs\my-first-app\target
   java -cp my-first-app-1.0-SNAPSHOT.jar com.rossbv.App
+`
   
 It would be simpler to run it if you had a manifest file inside the JAR file. Try doing this:
 
+`
   java -jar my-first-app-1.0-SNAPSHOT.jar
+`
   
 You will see it complains. See if you can work out how to modify your pom file to make it include a manifest file in your JAR.
 All it basically needs to know is the entry point for your program, i.e. com.rossbv.App
@@ -181,11 +198,13 @@ The instructions are here: https://github.com/mikereedell/sunrisesunsetlib-java
 Note that you don't need to download or build his code. All you need to do is add the relevant bit (shown below) to your pom
 file. This will download his JAR file and include it in your project automatically!
 
+`
   <dependency>
     <groupId>com.luckycatlabs</groupId>
     <artifactId>SunriseSunsetCalculator</artifactId>
     <version>1.2</version>
   </dependency>
+`
 
 Note that you can edit your pom.xml file directly in Eclipse by double clicking it and choosing the pom.xml tab at the bottom.
 After editing any file in Eclipse remember to press Ctrl S to save it. 
@@ -205,8 +224,10 @@ You can retrieve my code using Git. Then you can load it into Eclipse and examin
 
 Do the following:
 
+`
   cd C:\Users\Ross\Java Programs
   git clone https://github.com/scott-vincent/CrowthorneSun.git
+`
 
 You now have a copy of my source in: C:\Users\Ross\Java Programs\CrowthorneSun
 
@@ -239,6 +260,7 @@ Name your repository, e.g. my-first-app and click Create repository.
 GitHub will then display some helpful instructions. You want to "create a new repository on the command line" so do
 the following in the Windows command prompt:
 
+`
   cd C:\Users\Ross\Java Programs\my-first-app
   git init
   git add pom.xml
@@ -247,6 +269,7 @@ the following in the Windows command prompt:
   git commit -m "My first commit"
   git remote add origin https://github.com/ross-vincent/my-first-app.git
   git push -u origin master
+`
 
 Now look at your repository in GitHub using the web interface. You should see the 3 source files you added.
 
@@ -256,25 +279,31 @@ Exercise 5 - Java Classes and Unit Tests
 
 Download the FamilyCars application from GitHub by doing the following:
 
+`
   cd C:\Users\Ross\Java Programs
   git clone https://github.com/scott-vincent/FamilyCars.git
+`
 
 Import it into Eclipse and run it. The output is incorrect due to a bug.
 Examine the source to understand what the bug is and then fix it. The correct output should look like this:
 
+`
   Family Cars
   -----------
   Ford Focus owned by Scott Vincent
   Honda Jazz owned by Clare Vincent
   Honda Jazz driven by Ross Vincent
+`
 
 Run the unit tests in Eclipse. One of them will fail due to the above bug. Click on the Assert failure to see
 the expected result and the actual result.
 
 If you run the build on the command line it always runs the unit tests. Try it:
 
+`
   cd C:\Users\Ross\Java Programs\FamilyCars
   mvn clean install
+`
 
 Fix the unit test so that it no longer fails.
 
