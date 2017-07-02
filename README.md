@@ -361,11 +361,13 @@ Introducing Spring Boot (back-end Java) and AngularJS (front-end JavaScript).
 If you want to know what these can do for you, have a look here:
 
 Spring Boot: https://projects.spring.io/spring-boot/
+
 AngularJS: https://angularjs.org/
 
 All 'modern' web services generally involve REST and JSON. Find out more about them here:
 
 REST: https://en.wikipedia.org/wiki/Representational_state_transfer
+
 JSON: https://en.wikipedia.org/wiki/JSON
 
 Let's start with Spring Boot to see how easily we can create a RESTful back-end web server. 
