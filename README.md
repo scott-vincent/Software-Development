@@ -381,9 +381,9 @@ Import it into Eclipse and examine the source.
 
 There are only 3 small source files (and a unit tests file):
 
-Application.java - Basically, just a single line that starts the Spring Boot application
-Greeting.Java - This is the class that gets serialised into JSON format and returned by our web server.
-GreetingController.java - This defines our REST methods. There is only one called "/greeting". 
+Application.java - Basically, just a single line that starts the Spring Boot application  
+Greeting.Java - This is the class that gets serialised into JSON format and returned by our web server.  
+GreetingController.java - This defines our REST methods. There is only one called "/greeting".  
 
 and that's it!!
 
@@ -400,7 +400,7 @@ Your web server is running on port 8080 so try typing this in the address bar:
 
 ```
 localhost:8080
-``
+```
 
 You will get an error, but if you stop the web server and try again you will get a different error so at least we know it's listening on that port!
 
@@ -408,7 +408,7 @@ It's a REST service so it only listens on certain endpoints. Try this:
 
 ```
 localhost:8080/greeting
-``
+```
 
 That's better, we got some JSON back. Notice in the source, that REST method has an optional "name" query parameter. Try this:
 
