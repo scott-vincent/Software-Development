@@ -26,7 +26,7 @@ When installation is complete, click on Menu button (top-right) with the exclama
 Launch Eclipse and change the workspace to:
 
 ```
-C:\Users\<you>\workspace_java
+C:\Users\`<you>`\workspace_java
 ```
 
 You can tick the box to always use this workspace.
@@ -118,23 +118,23 @@ we can import our project into Eclipse using the "Import existing Maven project 
 It can create a project structure for you and get you started. Run a command prompt and do the following:
 
 ```
-cd c:\users\<you>
+cd c:\users\`<you>`
 mkdir "Java Programs"
 cd Java Programs
-mvn archetype:generate -DgroupId=com.<you> -DartifactId=my-first-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+mvn archetype:generate -DgroupId=com.`<you>` -DartifactId=my-first-app -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
 This has created a directory for you and put some dummy code in it. Use Windows Explorer to examine it.
 It created a Java source file for you:
 
 ```
-C:\Users\<you>\Java Programs\my-first-app\src\main\java\com\<you>\App.java
+C:\Users\`<you>`\Java Programs\my-first-app\src\main\java\com\`<you>`\App.java
 ```
 
 Maven also created a pom (build file) for you:
 
 ```
-C:\Users\<you>\Java Programs\my-first-app\pom.xml
+C:\Users\`<you>`\Java Programs\my-first-app\pom.xml
 ```
 
 Have a look at the pom file. It tells Maven how to build your program. If your program relies on external JAR files (similar to Python modules), there will be lines in the pom file telling it where to download them from and which version your program needs.
@@ -146,23 +146,23 @@ Whenever you write source code you should also write unit test code. This gets r
 that the source is functioning as you intended. Your unit test code is here:
 
 ```
-C:\Users\<you>\Java Programs\my-first-app\src\test\java\com\<you>\AppTest.java 
+C:\Users\`<you>`\Java Programs\my-first-app\src\test\java\com\`<you>`\AppTest.java 
 ```
 
 Now let's compile and run your App.java source.
 
 ```
-cd C:\Users\<you>\Java Programs\my-first-app
+cd C:\Users\`<you>`\Java Programs\my-first-app
 mvn clean install
 ```
 
 This should compile your app.java and create a JAR file for you. Note that a JAR file is just a zip file in disguise. You can
 load a JAR file into 7-zip to unzip it and see what it contains.
 
-The JAR file should be here: C:\Users\<you>\Java Programs\my-first-app\target\my-first-app-1.0-SNAPSHOT.jar
+The JAR file should be here: C:\Users\`<you>`\Java Programs\my-first-app\target\my-first-app-1.0-SNAPSHOT.jar
 
-Notice that the JAR file contains com/<you>/App.class. This is the compiled version of App.java.
-Also notice the structure. All your source starts with com.<you>. This is called the package name in Java.
+Notice that the JAR file contains com/`<you>`/App.class. This is the compiled version of App.java.
+Also notice the structure. All your source starts with com.`<you>`. This is called the package name in Java.
 You will see it in your source file. All external JAR files (modules) have a similar structure so that everything can be kept
 tidy inside a single JAR file. E.g. Look at a JAR file supplied by Microsoft and all the files inside it will start with
 com.microsoft.*
@@ -170,8 +170,8 @@ com.microsoft.*
 You can now run this JAR file using java:
 
 ```
-cd C:\Users\<you>\Java Programs\my-first-app\target
-java -cp my-first-app-1.0-SNAPSHOT.jar com.<you>.App
+cd C:\Users\`<you>`\Java Programs\my-first-app\target
+java -cp my-first-app-1.0-SNAPSHOT.jar com.`<you>`.App
 ```
   
 It would be simpler to run it if you had a manifest file inside the JAR file. Try doing this:
@@ -181,7 +181,7 @@ java -jar my-first-app-1.0-SNAPSHOT.jar
 ```
   
 You will see it complains. See if you can work out how to modify your pom file to make it include a manifest file in your JAR.
-All it basically needs to know is the entry point for your program, i.e. com.<you>.App
+All it basically needs to know is the entry point for your program, i.e. com.`<you>`.App
 
 For a big hint, go here: http://www.avajava.com/tutorials/lessons/how-do-i-specify-a-main-class-in-the-manifest-of-my-generated-jar-file.html  
 
@@ -254,11 +254,11 @@ You can retrieve my code using Git. Then you can load it into Eclipse and examin
 Do the following:
 
 ```
-cd C:\Users\<you>\Java Programs
+cd C:\Users\`<you>`\Java Programs
 git clone https://github.com/scott-vincent/CrowthorneSun.git
 ```
 
-You now have a copy of my source in: C:\Users\<you>\Java Programs\CrowthorneSun  
+You now have a copy of my source in: C:\Users\`<you>`\Java Programs\CrowthorneSun  
 
 Load the project into Eclipse:
 
@@ -292,13 +292,13 @@ GitHub will then display some helpful instructions. You want to "create a new re
 the following in the Windows command prompt:
 
 ```
-cd C:\Users\<you>\Java Programs\my-first-app
+cd C:\Users\`<you>`\Java Programs\my-first-app
 git init
 git add pom.xml
-git add src\main\java\com\<you>\App.java
-git add src\test\java\com\<you>\AppTest.java
+git add src\main\java\com\`<you>`\App.java
+git add src\test\java\com\`<you>`\AppTest.java
 git commit -m "My first commit"
-git remote add origin https://github.com/<your-name>/my-first-app.git
+git remote add origin https://github.com/`<your-name>`/my-first-app.git
 git push -u origin master
 ```
 
@@ -311,7 +311,7 @@ Exercise 5 - Java Classes and Unit Tests
 Download the FamilyCars application from GitHub by doing the following:
 
 ```
-cd C:\Users\<you>\Java Programs
+cd C:\Users\`<you>`\Java Programs
 git clone https://github.com/scott-vincent/FamilyCars.git
 ```
 
@@ -332,7 +332,7 @@ the expected result and the actual result.
 If you run the build on the command line it always runs the unit tests. Try it:
 
 ```
-cd C:\Users\<you>\Java Programs\FamilyCars
+cd C:\Users\`<you>`\Java Programs\FamilyCars
 mvn clean install
 ```
 
@@ -373,7 +373,7 @@ Let's start with Spring Boot to see how easily we can create a RESTful back-end 
 Download gs-rest-service from GitHub by doing the following:
 
 ```
-cd C:\Users\<you>\Java Programs
+cd C:\Users\`<you>`\Java Programs
 git clone https://github.com/scott-vincent/gs-rest-service.git
 ```
 
