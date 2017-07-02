@@ -190,7 +190,7 @@ Exercise 1 - Using Eclipse IDE
 ===========
 
 Try loading your project into Eclipse because the IDE will give you hints and help you when you write your source.
-Use File -> Import -> Maven -> Existing Maven Projects
+Use File -> Import -> Maven -> Existing Maven Projects  
 
 Use the Project Explorer to examine your files. Double click your App.java file to load it into the IDE's editor.
 
@@ -222,7 +222,7 @@ If in doubt, just try it and see if it does what you need (or maybe you can modi
 Somebody has written a Java package to calculate sunrise/sunset times for a particular location and date.
 See if you can call it from your App.java.
 
-The instructions are here: https://github.com/mikereedell/sunrisesunsetlib-java
+The instructions are here: https://github.com/mikereedell/sunrisesunsetlib-java  
 
 Note that you don't need to download or build his code. All you need to do is add the relevant bit (shown below) to your pom
 file. This will download his JAR file and include it in your project automatically!
@@ -240,7 +240,7 @@ After editing any file in Eclipse remember to press Ctrl S to save it.
 
 Whenever you edit your pom you will need to do the following in Eclipse:
 
-Right-click your project name (my-first-app) in the Project Explorer windows and select Maven -> Update Project 
+Right-click your project name (my-first-app) in the Project Explorer windows and select Maven -> Update Project  
 
 Now work out how to modify your App.java code to show sunrise/sunset times for Crowthorne.
 
@@ -258,7 +258,7 @@ cd C:\Users\<you>\Java Programs
 git clone https://github.com/scott-vincent/CrowthorneSun.git
 ```
 
-You now have a copy of my source in: C:\Users\<you>\Java Programs\CrowthorneSun
+You now have a copy of my source in: C:\Users\<you>\Java Programs\CrowthorneSun  
 
 Load the project into Eclipse:
 
@@ -360,15 +360,13 @@ Introducing Spring Boot (back-end Java) and AngularJS (front-end JavaScript).
 
 If you want to know what these can do for you, have a look here:
 
-Spring Boot: https://projects.spring.io/spring-boot/
-
-AngularJS: https://angularjs.org/
+Spring Boot: https://projects.spring.io/spring-boot/  
+AngularJS: https://angularjs.org/  
 
 All 'modern' web services generally involve REST and JSON. Find out more about them here:
 
-REST: https://en.wikipedia.org/wiki/Representational_state_transfer
-
-JSON: https://en.wikipedia.org/wiki/JSON
+REST: https://en.wikipedia.org/wiki/Representational_state_transfer  
+JSON: https://en.wikipedia.org/wiki/JSON  
 
 Let's start with Spring Boot to see how easily we can create a RESTful back-end web server. 
 
