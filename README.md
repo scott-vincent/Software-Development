@@ -8,10 +8,9 @@ https://www.eclipse.org/downloads
 Download the 64-bit version.  
 
 Create the following folder:
-
-`
+```
   C:\Program Files\Eclipse\Neon
-`
+```
 
 Right-click the folder and select Properties. Click the Security tab, in "Group or user names" choose "Users",
 then in "Permissions for Users" click Full Control and click Apply.
@@ -21,10 +20,9 @@ Start the installation by double-clicking the file you downloaded.
 Select Eclipse IDE for Java EE Developers and change the installation folder to the one you created above.
 When installation is complete, click on Menu button (top-right) with the exclamation mark on it and choose Update.
 Launch Eclipse and change the workspace to:
-
-`
+```
   C:\Users\<you>\workspace_java
-`
+```
 
 You can tick the box to always use this workspace.
 When the Eclipse IDE loads, just quit.
@@ -57,10 +55,9 @@ https://maven.apache.org/download.cgi
 
 Choose the Binary zip archive.
 Unzip to C:\ so you end up with:
-
-`
+```
   C:\apache-maven-3.5.0
-`
+```
 
 You need to create an environment variable to tell your system where JMaven is installed
 and to be able to run it from the command line. You do this as follows:
@@ -100,11 +97,11 @@ Validate Environment
 
 Make sure you set everything up correctly. Run a Command Prompt and try the following:
 
-`
+```
   java -version
   mvn --version
   git --version
-`
+```
 
 Getting Started (Your first Java program)
 ===============
