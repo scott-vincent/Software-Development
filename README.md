@@ -137,7 +137,8 @@ Maven also created a pom (build file) for you:
 C:\Users\<you>\Java Programs\my-first-app\pom.xml
 ```
 
-Have a look at the pom file. It tells Maven how to build your program. If your program relies on external JAR files (similar to Python modules), there will be lines in the pom file telling it where to download them from and which version your program needs.
+Have a look at the pom file. It tells Maven how to build your program. If your program relies on external JAR files (similar to Python modules),
+there will be lines in the pom file telling it where to download them from and which version your program needs.
 
 For a fuller description of what Maven does see here: https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html   
 
@@ -350,13 +351,13 @@ All they need is a web browser. They don't need to download or install anything,
 There are two main parts to a Web-based application. The back-end that runs on the server and the front-end (User Interface or UI) that runs in the web browser.
 The back-end may also access other services/databases running on the same or possibly different servers.
 
-We are going to write the front-end in JavaScript and the back-end in Java. But we want to do it fast, and we certainly don't want to re-invent the wheel.
+We are going to write the front-end in Javascript and the back-end in Java. But we want to do it fast, and we certainly don't want to re-invent the wheel.
 
 What if there was some super-duper frameworks where somebody has already done all the hard-work for us, making it super easy for us so we only have to write
 the actual app-specific code and not have to worry about wiring up the front-end to the back-end, converting to and from serialised to internal object formats
 (so data can be transferred over the internet), configuring our web-service, manipulating the DOM, etc. etc. etc.
 
-Introducing Spring Boot (back-end Java) and AngularJS (front-end JavaScript).
+Introducing Spring Boot (back-end Java) and AngularJS (front-end Javascript).
 
 If you want to know what these can do for you, have a look here:
 
@@ -463,17 +464,86 @@ http://localhost:8080/greeting
 ```
 
 You are now serving both client-side (html) and server-side (java) data. Normally, the user wouldn't call the server-side REST methods
-directly. Instead,  the client-side html would include JavaScript (*.js) files (which would also be served from your static folder
-and downloaded into the client's browser) and the JavaScript would make the REST calls on the user's behalf whenever the UI requires it.  
+directly. Instead,  the client-side html would include Javascript (*.js) files (which would also be served from your static folder
+and downloaded into the client's browser) and the Javascript would make the REST calls on the user's behalf whenever the UI requires it.  
 
 
 Exercise 8 - AngularJS
 ==========
 
-We are now going to make your static client-side files much more dynamic with the magic of AngularJS. You can do lots of clever things
-and create some pretty web pages by manipulating the DOM (Document Object Model) using JavaScript.
+We are now going to make your static client-side files much more dynamic and responsive with the magic of AngularJS. You can do lots of
+clever things using only client-side code and create some pretty web pages by manipulating the DOM (Document Object Model) using Javascript.
 
 You don't know how to manipulate the DOM? Don't worry, AngularJS hides all this away from you and makes it super-easy!
 Also, as we definitely don't like re-inventing the wheel, there are lots of open-source AngularJS plug-ins that we can take advantage of.
 
-Coming soon!  
+AngularJS is written in Javascript and you need to include it in your HTML file to be able to use it. Rather than downloading AngularJS
+from your web server the client may as well download it directly from Google.
+
+Modify your index.html file so that it looks like this:
+
+```
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  </head>
+  
+  <body>
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+  </body>
+</html>
+```
+
+Now start your web server (stop it first if it's already running) and using your web browser (or any browser on any other device) go to:
+
+```
+http://<your IP address>:8080
+```
+
+You can find the IP address of your web server by typing 'ipconfig' at the command prompt.
+
+Notice as you type characters into the name field they are immediately echoed in the 'Welcome' field. This is AngularJS doing its dynamic
+thing and you haven't even written any Javascript yet!  
+
+Also, we are not using the back-end yet (other than to serve a file). Stop your web server and use Windows Explorer to browse to your
+index.html file, then double-click it. Windows will load it into your web browser and it will work just as well. This is because
+AngularJS is just Javascript and it runs in your browser.
+
+Notice the 'ng-' entries in your index.html file, e.g. <html ng-app> and ng-model="yourName". These are special markers that AngularJS uses
+to interact with your HTML (DOM). It also uses double curly braces to execute in-line Javascript, e.g. {{yourName}}. In that case, it's simply
+the name of an AngularJS variable, the one you defined earlier with 'ng-model'.
+
+
+Exercise 9 - Calling The Back-End From AngularJS
+==========
+
+We need to be able to call our back-end from AngularJS so that we can execute our Java code. This means we are going to have to start
+writing our own Javascript. The Javascript will be served from our web server, just like the index.html file is, so we can write and
+edit it in Eclipse.
+
+Note that you don't need to restart the web server when changing any of the static files. All you need to do is press F5 on your browser
+to force it to refresh and re-download the client files from the web server folder.
+
+There are many AngularJS tutorials you can work through online. For this exercise I've already written the code so you can just download
+it from GitHub and study it in Eclipse. Do the following:
+
+```
+cd C:\Users\<you>\Java Programs
+git clone ???       (coming soon!)
+```
+
+Import the project into Eclipse and examine the source.
+...
+
+
+Exercise 10 - Back-End Databases
+===========
+
+JPA
+Coming soon!
