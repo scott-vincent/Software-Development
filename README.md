@@ -259,7 +259,7 @@ cd C:\Users\<you>\Java Programs
 git clone https://github.com/scott-vincent/CrowthorneSun.git
 ```
 
-You now have a copy of my source in: C:\Users\`<you>`\Java Programs\CrowthorneSun  
+You now have a copy of my source in: C:\Users\\`<you>`\Java Programs\CrowthorneSun  
 
 Load the project into Eclipse:
 
