@@ -560,7 +560,7 @@ Finally, see if you can modify the front-end so that you can add and delete film
 Exercise 10 - Back-End Databases
 ===========
 
-In the previous exercise, everytime you restarted the server all your updates were lost and you data reverted back to how it
+In the previous exercise, everytime you restarted the server all your updates were lost and your data reverted back to how it
 was originally. What you really need to do is use a back-end database so that your data is persisted.
 
 JPA  
