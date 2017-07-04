@@ -535,15 +535,33 @@ it from GitHub and study it in Eclipse. Do the following:
 
 ```
 cd C:\Users\<you>\Java Programs
-git clone ???       (coming soon!)
+git clone https://github.com/scott-vincent/Films.git
 ```
 
 Import the project into Eclipse and examine the source.
-...
+Run the web server and go to http://localhost:8080  
+
+Modify the back-end source and add two new REST calls so that you can add and delete films.
+The REST calls should look like this:
+
+```
+POST /films
+DELETE /films/{id}
+```
+
+You will also need to supply a body for the POST call in the same format as returned by GET /films/{id}  
+Also, you shouldn't need to supply an id when creating a film. Instead, the back-end should allocate the next free id for you.
+See if you can work out how to do that.
+
+Update the unit tests to confirm that the add and delete REST calls are working correctly.
+Finally, see if you can modify the front-end so that you can add and delete films using the UI.
 
 
 Exercise 10 - Back-End Databases
 ===========
 
-JPA
+In the previous exercise, everytime you restarted the server all your updates were lost and you data reverted back to how it
+was originally. What you really need to do is use a back-end database so that your data is persisted.
+
+JPA  
 Coming soon!
