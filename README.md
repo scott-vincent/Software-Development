@@ -530,6 +530,15 @@ edit it in Eclipse.
 Note that you don't need to restart the web server when changing any of the static files. All you need to do is press F5 on your browser
 to force it to refresh and re-download the client files from the web server folder.
 
+Note: Sometimes, just pressing F5 in the browser isn't enough to pick up your latest changes to static files. Instead, you should
+use the Chrome plugin called "Clear Cache" which you can download from here:
+
+https://chrome.google.com/webstore/detail/clear-cache/cppjkneekbjaeellbfkmgnhonkkjfpdn?utm_source=chrome-ntp-icon 
+
+AngularJS relies heavily on promises (asynchronous code). There is an excellent description of what a promise is here:
+
+http://www.dwmkerr.com/promises-in-angularjs-the-definitive-guide/
+
 There are many AngularJS tutorials you can work through online. For this exercise I've already written the code so you can just download
 it from GitHub and study it in Eclipse. Do the following:
 
