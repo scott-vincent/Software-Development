@@ -13,7 +13,7 @@ Download the 64-bit version.
 Create the following folder:
 
 ```
-C:\Program Files\Eclipse\Neon
+C:\Program Files\Eclipse\Oxygen
 ```
 
 Right-click the folder and select Properties. Click the Security tab, in "Group or user names" choose "Users",
