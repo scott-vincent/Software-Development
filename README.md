@@ -1,8 +1,8 @@
 In all of the following instructions, please replace `<you>` with something sensible depending on the context!
 
 
-Eclipse Neon (IDE)
-============
+Eclipse Oxygen (IDE)
+==============
 
 Download from:
 
